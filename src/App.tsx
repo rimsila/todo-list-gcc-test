@@ -3,7 +3,7 @@ import TodosList from "./todo-list";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+const AppRoot =()=> {
   return (
     <TodoProvider>
       <ToastContainer />
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRoot;
