@@ -73,7 +73,7 @@ const TodoProvider = ({ children }: { children: React.ReactNode }) => {
     newTodo.filter((todo: ITodo) => {
       if (todo.id === id) {
         todo.title = data?.title?.trim();
-        setTodos([...todos]);
+        setTodos([...newTodo]);
       }
     });
     toast("Updated todo successfully!", {
