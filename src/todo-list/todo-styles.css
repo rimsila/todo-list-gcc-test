@@ -1,0 +1,109 @@
+.todo-title {
+    background: rgb(54, 124, 165);
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+    font-weight: bolder;
+    border: 5px double white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: 1px;
+    margin: 0;
+}
+
+.todo-body {
+    padding: 20px;
+}
+
+.todos-container {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 60px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f356;
+    padding: 0.5rem 1rem;
+}
+
+.list:not(:last-child) {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.list--text h2 {
+    color: #356e94;
+    font-size: 24px;
+    margin: 0;
+    border-radius: 20px;
+}
+
+.list--btn {
+    border-radius: 50px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    background: #099dff;
+    border: 1px solid #1f42dd;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.list--btn-remove {
+    color: #fff;
+    margin-right: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    cursor: pointer;
+    background: red;
+    border: 1px solid red;
+}
+
+.hide-button {
+    display: none;
+}
+
+.todo-outer {
+    position: relative;
+    margin: 0 auto;
+}
+
+.todo-btn-overlap {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    right: 3px;
+}
+
+.todo-outer:hover .todo-btn-overlap {
+    display: block;
+}
+
+.todo-form ::placeholder {
+    color: #144f77;
+    font-size: medium;
+}
+
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.todo-form input {
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 2px solid rgb(226, 228, 230);
+}
+
+.todo-form label {
+    margin-right: 15px;
+}
