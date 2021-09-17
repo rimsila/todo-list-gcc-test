@@ -1,14 +1,15 @@
 import * as React from "react";
 
-import { ContextType, ITodo, TodoCtx } from "./todoCtx";
+import { ITodo, TodoCtx } from "./todoCtx";
 import Todo from "../todo-list/Todo";
 import "./todo-styles.css";
 import AddTodoForm from "./AddTodoForm";
 
 const TodosList = () => {
-  const { todos, removeTodo } = React.useContext(
-    TodoCtx
-  ) as ContextType;
+  const { todos, removeAll, setDefault} =
+    React.useContext(TodoCtx);
+
+
 
   return (
     <div className="todos-container">
@@ -23,10 +24,24 @@ const TodosList = () => {
             key={todo.id}
             {...{
               todo,
-              removeTodo,
             }}
           />
         ))}
+
+        {/* -------- footer ---------*/}
+        {todos.length > 0 ? (
+          <div className="footer">
+            <button onClick={removeAll} className="clear-btn">
+              Remove All
+            </button>
+          </div>
+        ) : (
+          <div className="footer">
+            <button onClick={setDefault} className="clear-btn">
+              Set default todo
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -3,15 +3,16 @@ import { ITodo, TodoCtx } from "./todoCtx";
 
 type TodoProps = {
   todo: ITodo;
-  removeTodo: (id: number) => void;
 };
 
-const Todo = ({ todo, removeTodo }: TodoProps) => {
-  const { setEditTodo } = React.useContext(TodoCtx);
+const Todo = ({ todo }: TodoProps) => {
+  const { setEditTodo, removeTodo } = React.useContext(TodoCtx);
 
   return (
-    <div className="list todo-outer">
-      <div className="list--text">
+    <div
+      className="list todo-outer"
+    >
+      <div className={`list--text ${todo.isDone ? "complete" : ""}`}>
         <ul style={{ margin: 0 }}>
           <li>
             <h2>{todo.title}</h2>
@@ -26,7 +27,6 @@ const Todo = ({ todo, removeTodo }: TodoProps) => {
           className="list--btn-remove"
           onClick={() => {
             removeTodo(todo?.id);
-            setEditTodo({ title: "", id: undefined });
           }}
         >
           X

@@ -1,14 +1,14 @@
-import TodoProvider from "./todo-list/todoCtx";
+import TodoListProvider from "./todo-list/todoCtx";
 import TodosList from "./todo-list";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AppRoot =()=> {
   return (
-    <TodoProvider>
+    <TodoListProvider>
       <ToastContainer />
       <TodosList />
-    </TodoProvider>
+    </TodoListProvider>
   );
 }
 

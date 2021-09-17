@@ -1,3 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.clear-btn {
+    border-radius: 50px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    background: #099dff;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.complete {
+    text-decoration: line-through;
+    user-select: none;
+}
+
 .todo-title {
     background: rgb(54, 124, 165);
     padding: 8px;

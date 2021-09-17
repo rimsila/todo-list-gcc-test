@@ -23,6 +23,7 @@ const AddTodoForm = () => {
       setIsExistList(Boolean(existTitle));
       return;
     }
+
     setIsExistList(false);
   };
 
@@ -56,6 +57,7 @@ const AddTodoForm = () => {
       <form className="todo-form" onSubmit={(e) => onSaveTodo(e)}>
         <label htmlFor="name">Todo:</label>
         <input
+          autoComplete="off"
           value={editTodo?.title}
           pattern="^(?!\s*$).+" // prevent whitespace
           placeholder="What needs to be done?"
